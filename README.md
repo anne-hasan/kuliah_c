@@ -1,2 +1,2 @@
-# kuliah_c-
-Tugas tugas kuliah pemrograman dasar dengan C++
+# Algoritma dan Pemrograman Dasar
+Tugas-tugas kuliah pemrograman dasar dengan C++
