@@ -1,2 +1,2 @@
-# Algoritma dan Pemrograman Dasar
+# Tugas Pemrograman C++
 Tugas-tugas kuliah pemrograman dasar dengan C++
