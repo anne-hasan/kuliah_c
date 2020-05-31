@@ -3,31 +3,40 @@
 #include <iomanip>
 using namespace std;
 
-// Class
-struct Anne {
-	string nim[20], nama[20], index[20];
-    int nilaiQuiz[20], nilaiUTS[20], nilaiUAS[20];
-    float nilaiAkhir[20];
+struct trans {
+	string nama, alamat, telp;
+    int totalQty, totalPrice;
+    detailTrans dataDetailTrans;
 };
 
-Anne data;
+struct detailTrans {
+    int harga, qty, subTotal;
+    string kode, nama;
+};
 
+trans dataTrans;
 int main() {
-	int jumlah, i;
-    cout << "Jumlah mahasiswa : ";
-    cin >> jumlah;
+	int totalPelanggan, totalProd, i;
+    cout << "Jumlah pelanggan : ";
+    cin >> totalPelanggan;
 	cout << endl;
-	for (i = 0; i < jumlah; i++)
+	for (int i = 0; i < totalPelanggan; i++)
 	{
+        totalProd = 1;
 		cout << "--------------------------------------------------" << endl;
-		cout << "Data ke-" << i+1 << endl;
+		cout << "PELANGGAN KE -" << i + 1 << endl;
 		cout << "--------------------------------------------------" << endl;
-		cout << "NIM        : "; cin >> data.nim[i];
-		cout << "Nama       : "; cin >> data.nama[i];
-		cout << "Nilai Kuis : "; cin >> data.nilaiQuiz[i];
-		cout << "Nilai UTS  : "; cin >> data.nilaiUTS[i];
-		cout << "Nilai UAS  : "; cin >> data.nilaiUAS[i];
+		cout << "DATA DIRI PELANGGAN " << endl;
+		cout << "Nama         : "; cin >> dataTrans.nama[i];
+		cout << "Alamat       : "; cin >> dataTrans.alamat[i];
+		cout << "Telepon      : "; cin >> dataTrans.telp[i];
+		cout << "Total Produk : "; cin >> totalProd;
+        cout << endl;
+        cout << endl;
+		cout << "DATA DIRI PELANGGAN " << endl;
+
 		cout << endl;
+
 
         data.nilaiAkhir[i] = (data.nilaiQuiz[i] + data.nilaiUTS[i] + data.nilaiUAS[i])/3;
         if (data.nilaiAkhir[i] >= 80) {
@@ -59,7 +68,7 @@ int main() {
 	cout << "-----------------------------------------------------------------------" << endl;
 	cout << "|     NIM     |    Nama    |  Quiz  |  UTS  |  UAS  |   NA   |  Index  |" << endl;
 	cout << "-----------------------------------------------------------------------" << endl;
-	for (i = 0; i < jumlah; i++)
+	for (int i = 0; i < totalPelanggan; i++)
 	{
 		cout << setw(10) << data.nim[i]
              << setw(10) << data.nama[i] 

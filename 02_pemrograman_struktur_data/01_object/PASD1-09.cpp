@@ -7,12 +7,12 @@
 #include <iomanip>
 using namespace std;
 
-struct pelangganToko {
+struct Anne {
 	string nama[20], alamat[20], gender[2], telp[20];
 	int umur[3];
 };
 
-pelangganToko data;
+Anne data;
 
 int main() {
 	int jumlah, i;
